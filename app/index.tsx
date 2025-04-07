@@ -116,7 +116,7 @@ export default function Index() {
                     <Text className="text-xs text-green-700">Multiplayer</Text>
                   </View>
                   <Text className="text-xs text-slate-400 ml-2">
-                    Quick matches
+                    Coming soon!
                   </Text>
                 </View>
               </View>
