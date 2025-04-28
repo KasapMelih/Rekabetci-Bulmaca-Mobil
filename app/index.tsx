@@ -36,9 +36,11 @@ export default function Index() {
                 Challenge Your Mind
               </Text>
             </View>
-            <TouchableOpacity className="bg-white/20 p-2 rounded-full">
-              <Ionicons name="person" size={24} color="white" />
-            </TouchableOpacity>
+            <Link href="/profile" asChild>
+              <TouchableOpacity className="bg-white/20 p-2 rounded-full">
+                <Ionicons name="person" size={24} color="white" />
+              </TouchableOpacity>
+            </Link>
           </View>
 
           {/* User Stats */}
@@ -60,9 +62,7 @@ export default function Index() {
 
         {/* Featured Games */}
         <View className="px-4 py-6">
-          <Text className="text-xl font-bold text-slate-800 mb-4">
-            Featured Games
-          </Text>
+          <Text className="text-xl font-bold text-slate-800 mb-4">Games</Text>
 
           <View className="flex-row space-x-4 mb-8">
             {/* Sudoku */}
@@ -161,12 +161,13 @@ export default function Index() {
                 </Text>
               </View>
             ))}
-
-            <TouchableOpacity className="mt-3 items-center">
-              <Text className="text-indigo-600 font-medium">
-                View Full Leaderboard
-              </Text>
-            </TouchableOpacity>
+            <Link href="/leaderboard" asChild>
+              <TouchableOpacity className="mt-3 items-center">
+                <Text className="text-indigo-600 font-medium">
+                  View Full Leaderboard
+                </Text>
+              </TouchableOpacity>
+            </Link>
           </View>
         </View>
       </ScrollView>
@@ -177,18 +178,24 @@ export default function Index() {
           <Ionicons name="home" size={24} color="#4f46e5" />
           <Text className="text-xs text-indigo-600 font-medium">Home</Text>
         </TouchableOpacity>
-        <TouchableOpacity className="flex-1 items-center">
-          <Ionicons name="trophy-outline" size={24} color="#64748b" />
-          <Text className="text-xs text-slate-500">Compete</Text>
-        </TouchableOpacity>
-        <TouchableOpacity className="flex-1 items-center">
-          <Ionicons name="stats-chart-outline" size={24} color="#64748b" />
-          <Text className="text-xs text-slate-500">Stats</Text>
-        </TouchableOpacity>
-        <TouchableOpacity className="flex-1 items-center">
-          <Ionicons name="settings-outline" size={24} color="#64748b" />
-          <Text className="text-xs text-slate-500">Settings</Text>
-        </TouchableOpacity>
+        <Link href="/leaderboard" asChild>
+          <TouchableOpacity className="flex-1 items-center">
+            <Ionicons name="trophy-outline" size={24} color="#64748b" />
+            <Text className="text-xs text-slate-500">Leaderboard</Text>
+          </TouchableOpacity>
+        </Link>
+        <Link href="/stats" asChild>
+          <TouchableOpacity className="flex-1 items-center">
+            <Ionicons name="stats-chart-outline" size={24} color="#64748b" />
+            <Text className="text-xs text-slate-500">Stats</Text>
+          </TouchableOpacity>
+        </Link>
+        <Link href="/settings" asChild>
+          <TouchableOpacity className="flex-1 items-center">
+            <Ionicons name="settings-outline" size={24} color="#64748b" />
+            <Text className="text-xs text-slate-500">Settings</Text>
+          </TouchableOpacity>
+        </Link>
       </View>
     </SafeAreaView>
   );
